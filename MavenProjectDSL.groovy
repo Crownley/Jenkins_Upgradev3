@@ -6,9 +6,6 @@ job('First-Maven-Project-Via-DSL') {
     triggers {
         scm('* * * * *')
     }
-    steps {
-        maven('clean package', 'maven-samples/single-module/pom.xml')
-    }
     publishers {
         //archive the war file generated
         archiveArtifacts '**/*.jar'
